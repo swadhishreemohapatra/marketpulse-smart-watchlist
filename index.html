@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MarketPulse | Smart Market Watchlist</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header>
+  <div class="brand"><span class="logo">M</span><div><h1>MarketPulse</h1><p>Know what changed.</p></div></div>
+  <button id="refreshBtn" class="secondary">↻ Refresh</button>
+</header>
+
+<main>
+  <section class="hero">
+    <div>
+      <p class="eyebrow">SMART MARKET WATCHLIST</p>
+      <h2>What changed since your last visit?</h2>
+      <p class="muted">MarketPulse prioritizes meaningful movements so you know where to look first.</p>
+    </div>
+    <div class="last-check">Last checked: <strong id="lastChecked">First visit</strong></div>
+  </section>
+
+  <section class="summary">
+    <div class="summary-card danger"><span>🔴</span><div><b id="attentionCount">0</b><small>Needs attention</small></div></div>
+    <div class="summary-card warning"><span>🟡</span><div><b id="watchCount">0</b><small>Worth watching</small></div></div>
+    <div class="summary-card normal"><span>🟢</span><div><b id="normalCount">0</b><small>No significant change</small></div></div>
+  </section>
+
+  <section class="controls">
+    <div>
+      <h3>My Watchlist</h3>
+      <p class="muted">Track stocks and focus on meaningful changes.</p>
+    </div>
+    <form id="addForm">
+      <input id="symbolInput" placeholder="Stock symbol e.g. TCS" maxlength="12" required>
+      <button class="primary">+ Add Stock</button>
+    </form>
+  </section>
+
+  <section id="stocks" class="stock-grid"></section>
+
+  <div id="message" class="message"></div>
+</main>
+
+<footer>MarketPulse • CODE 2026 • Demonstration market data</footer>
+<script src="app.js"></script>
+</body>
+</html>
